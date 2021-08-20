@@ -1,0 +1,86 @@
+body {
+	background: url(img/Background.png);
+	color: #fff;
+	background-size: cover;
+}
+.wrapper {
+	width: 84%;
+	margin: 0 auto;
+}
+
+.start-page {
+	padding-top: 70px;
+}
+
+.start-page__title {
+	font: bold 67px/57px Helvetica;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.start-page__subtitle {
+	font: normal 24px/20px Helvetica;
+	margin-top: 0;
+	margin-bottom: 60px;
+}
+
+.start-page__menu__level {
+	margin-bottom: 30px;
+}
+
+.level-item {
+	font: bold 59px/50px Helvetica;
+	margin-bottom: 24px;
+	padding-left: 40px;
+	position: 	relative;
+}
+
+.active::before {
+	content: "";
+	position: absolute;
+  	left: 0px;
+  	top: 15px;
+  	background-image: url(img/Rectangle.png);
+  	width: 26px;
+  	height: 26px;
+}
+
+.start-page__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.start-page__button {
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	padding: 29px 88px;
+	font: bold 38px/32px Helvetica;
+	color: #fff;
+	background: #D62B2E;
+	border-radius: 7px;
+}
+
+.start-page__cards {
+	width: 50%;
+	height: 417px;
+	background: 100% url(img/cards.png) no-repeat;
+	
+}
+
+.off {
+	display: none;
+}
+
+
+
+/* класс создан в JS для рубашки карты*/
+.card {
+  background: url(images/card.png);
+  width: 218px;
+  height: 341px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 7px;
+}
