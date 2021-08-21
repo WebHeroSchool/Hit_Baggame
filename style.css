@@ -73,6 +73,11 @@ body {
 	display: none;
 }
 
+.game__field {
+	width: 100%;
+	display: flex;
+}
+
 
 
 /* класс создан в JS для рубашки карты*/

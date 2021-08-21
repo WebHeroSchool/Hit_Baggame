@@ -19,11 +19,12 @@ level.addEventListener('click', function() {
 button.addEventListener('click', function() {
 	startpage.classList.add('off');
 	game__field.classList.remove('off');
+
+	if ()
 // Это надо засунуть в цикл, код вязанный к выбранному уровню 
 	let el = document.createElement('div');
 	el.classList.add("card");
 	game__field.append(el);
-// если изи есть класс актив, то 3,
 
 });
 
