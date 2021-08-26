@@ -1,35 +1,64 @@
-// тут мы жмем на кнопку, чтоб выбрать уровень м б добавить класс active, который добавляет псевдоэлемент и обозначить его красным квадратиком 
-
 let level = document.querySelectorAll('.level-item'),
 	startpage = document.querySelector('.start-page'),
 	button = document.querySelector('.start-page__button'),
 	game__field = document.querySelector('.game__field');
-
-
-level.addEventListener('click', function() {
-	 for (let i = 0; i < level.length; i++) {
+	
+//  Выбор уровня
+level.forEach (item => item.addEventListener('click', function() {
+	for (let i = 0; i < level.length; i++) {
         level[i].classList.remove('active');       
     }
-
 		this.classList.add('active');
-});
+}));
 
+// Создание карты на игровом поле
+function createCard() {
+	let el = document.createElement('div');
+	el.classList.add("card");
+	game__field.append(el);
+	el.addEventListener('click', flipCard);
+}
 
+let counterClick=0;
 
+const flipCard = (event) => {
+	event.target.className = 'flip-card-game_over';
+	counterClick++;
+	if (counterClick > 1) window.location.reload();
+}
+
+// Начинаем игру
 button.addEventListener('click', function() {
 	startpage.classList.add('off');
 	game__field.classList.remove('off');
 
-	if ()
-// Это надо засунуть в цикл, код вязанный к выбранному уровню 
-	let el = document.createElement('div');
-	el.classList.add("card");
-	game__field.append(el);
+for (let i = 0; i < level.length; i++) {
+	if (level[i].classList.contains('active')) {	
+		let counterCards = level[i].getAttribute('data-card');				
+			for (let i = 0; i < counterCards; i++) {
+				createCard();
+			if (counterCards == 6 || counterCards ==3) {
+				game__field.style.width = 66 + '%';
+			}
+		}
 
+		let bag = Math.floor(Math.random())*counterCards;
+		let cardBag  = document.querySelectorAll('.card')[bag];
+		cardBag.onclick = () => {
+		cardBag.style.background = "url(img/card_with_bag.png)";
+		}
+
+	}
+}
 });
 
 
+			
 
-// тут надо сделать клик на начать игру и очистить всю страницу, добавив класс off для start-page
+	
 
-//  добавляем количество карт 3/6/10 if (e.target.classList.contains('active') это для привязки getAttribute()
+// Возврат на экран!!!!!!!!!!
+
+	// startpage.classList.remove('off');
+	// game__field.classList.add('off');
+

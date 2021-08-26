@@ -2,6 +2,7 @@ body {
 	background: url(img/Background.png);
 	color: #fff;
 	background-size: cover;
+	margin: 0;
 }
 .wrapper {
 	width: 84%;
@@ -76,16 +77,32 @@ body {
 .game__field {
 	width: 100%;
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-left: 24px;
+	margin: 0 auto;
+	padding-top: 40px;
 }
-
-
 
 /* класс создан в JS для рубашки карты*/
 .card {
-  background: url(images/card.png);
-  width: 218px;
-  height: 341px;
-  margin-right: 24px;
-  margin-bottom: 24px;
-  border-radius: 7px;
+	background: url(img/card.png);
+}
+
+.card, .flip-card-game_over {
+	width: 218px;
+	height: 341px;
+	margin-right: 24px;
+	margin-bottom: 24px;
+	border-radius: 7px;
+}
+
+.card:hover {
+	transform: translateY(-10px) rotate(-5deg);
+	transition: 1s;
+	box-shadow: 7px 7px 15px 0 black;
+}
+
+.flip-card-game_over {
+	background: url(img/card-game_over.png);
 }
