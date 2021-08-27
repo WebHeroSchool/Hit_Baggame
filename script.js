@@ -40,25 +40,17 @@ for (let i = 0; i < level.length; i++) {
 			if (counterCards == 6 || counterCards ==3) {
 				game__field.style.width = 66 + '%';
 			}
+
+			if (counterCards == 6 || counterCards ==10) {
+				game__field.style.paddingTop = 160 + 'px';
+			}
 		}
 
-		let bag = Math.floor(Math.random())*counterCards;
+		let bag = Math.floor(Math.random()*counterCards);
 		let cardBag  = document.querySelectorAll('.card')[bag];
 		cardBag.onclick = () => {
 		cardBag.style.background = "url(img/card_with_bag.png)";
 		}
-
 	}
 }
 });
-
-
-			
-
-	
-
-// Возврат на экран!!!!!!!!!!
-
-	// startpage.classList.remove('off');
-	// game__field.classList.add('off');
-

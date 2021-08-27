@@ -5,24 +5,25 @@ body {
 	margin: 0;
 }
 .wrapper {
-	width: 84%;
+	width: 86%;
 	margin: 0 auto;
 }
 
 .start-page {
-	padding-top: 70px;
+	padding-top: 134px;
 }
 
 .start-page__title {
-	font: bold 67px/57px Helvetica;
+	font: bold 54px/57px 'RobotoBold', sans-serif;
+	font-weight: bold;
 	margin-top: 0;
-	margin-bottom: 8px;
+	margin-bottom: 14px;
 }
 
 .start-page__subtitle {
-	font: normal 24px/20px Helvetica;
+	font: normal 20px/20px 'RobotoRegular', sans-serif;
 	margin-top: 0;
-	margin-bottom: 60px;
+	margin-bottom: 64px;
 }
 
 .start-page__menu__level {
@@ -30,9 +31,9 @@ body {
 }
 
 .level-item {
-	font: bold 59px/50px Helvetica;
-	margin-bottom: 24px;
-	padding-left: 40px;
+	font: bold 49px/50px 'RobotoBold', sans-serif;
+	margin-bottom: 34px;
+	padding-left: 50px;
 	position: 	relative;
 }
 
@@ -56,14 +57,18 @@ body {
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
-	padding: 29px 88px;
-	font: bold 38px/32px Helvetica;
+	padding: 31px 82px;
+	font: bold 32px/34px 'RobotoRegular', sans-serif;
 	color: #fff;
 	background: #D62B2E;
 	border-radius: 7px;
+	margin-top: 84px;
 }
 
 .start-page__cards {
+	position: absolute;	
+	right: 68px;
+    bottom: 97px;	
 	width: 50%;
 	height: 417px;
 	background: 100% url(img/cards.png) no-repeat;
@@ -81,7 +86,7 @@ body {
 	flex-wrap: wrap;
 	padding-left: 24px;
 	margin: 0 auto;
-	padding-top: 40px;
+	padding-top: 340px;
 }
 
 /* класс создан в JS для рубашки карты*/
