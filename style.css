@@ -107,7 +107,7 @@ body {
 .card:hover {
 	transform: translateY(-10px) rotate(-5deg);
 	transition: 1s;
-	box-shadow: 7px 7px 15px 0 black;
+	box-shadow: 7px 7px 15px 0 #2f2f2f;
 }
 
 .flip-card-game_over {
