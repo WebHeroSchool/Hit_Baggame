@@ -69,7 +69,7 @@ body {
 	position: absolute;	
 	right: 68px;
     bottom: 97px;	
-	width: 50%;
+	width: 52%;
 	height: 417px;
 	background: 100% url(img/cards.png) no-repeat;
 	
@@ -81,17 +81,19 @@ body {
 
 .game__field {
 	width: 100%;
-	display: flex;
+	min-height: 1024px;
+	display: none;
 	justify-content: center;
+	align-content: center; 
 	flex-wrap: wrap;
-	padding-left: 24px;
+	padding: 24px 0 24px 24px;
 	margin: 0 auto;
-	padding-top: 340px;
 }
 
 /* класс создан в JS для рубашки карты*/
 .card {
 	background: url(img/card.png);
+	background-size: cover;
 }
 
 .card, .flip-card-game_over {
@@ -110,4 +112,43 @@ body {
 
 .flip-card-game_over {
 	background: url(img/card-game_over.png);
+}
+
+@media(max-width: 996px){
+	.start-page__cards {
+	display: none;	
+	}
+}
+
+@media(max-width: 1112px) {
+	.card, .flip-card-game_over {
+		width: 200px;
+		height: 312px;
+	}
+
+	.game__field {
+		width: 100%;
+	}
+
+	.wrapper {
+		width: 96%;
+	}
+}
+
+@media(max-width: 798px) {
+	.card, .flip-card-game_over {
+		width: 160px;
+		height: 246px;
+	}
+
+	.game__field {
+		width: 100%;
+	}
+}
+
+@media(max-width: 592px) {
+		.card, .flip-card-game_over {
+		width: 140px;
+		height: 215px;
+	}
 }

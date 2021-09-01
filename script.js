@@ -30,7 +30,7 @@ const flipCard = (event) => {
 // Начинаем игру
 button.addEventListener('click', function() {
 	startpage.classList.add('off');
-	game__field.classList.remove('off');
+	game__field.style.display = 'flex';
 
 for (let i = 0; i < level.length; i++) {
 	if (level[i].classList.contains('active')) {	
@@ -38,11 +38,7 @@ for (let i = 0; i < level.length; i++) {
 			for (let i = 0; i < counterCards; i++) {
 				createCard();
 			if (counterCards == 6 || counterCards ==3) {
-				game__field.style.width = 66 + '%';
-			}
-
-			if (counterCards == 6 || counterCards ==10) {
-				game__field.style.paddingTop = 160 + 'px';
+				game__field.style.width = 78 + '%';
 			}
 		}
 
