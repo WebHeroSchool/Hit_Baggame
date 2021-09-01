@@ -51,6 +51,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: 	relative;
 }
 
 .start-page__button {
@@ -68,8 +69,8 @@ body {
 .start-page__cards {
 	position: absolute;	
 	right: 68px;
-    bottom: 97px;	
-	width: 52%;
+    bottom: 0;	
+	width: 57%;
 	height: 417px;
 	background: 100% url(img/cards.png) no-repeat;
 	
@@ -81,12 +82,11 @@ body {
 
 .game__field {
 	width: 100%;
-	min-height: 1024px;
 	display: none;
 	justify-content: center;
 	align-content: center; 
 	flex-wrap: wrap;
-	padding: 24px 0 24px 24px;
+	height: 100vh;
 	margin: 0 auto;
 }
 
@@ -112,12 +112,7 @@ body {
 
 .flip-card-game_over {
 	background: url(img/card-game_over.png);
-}
-
-@media(max-width: 996px){
-	.start-page__cards {
-	display: none;	
-	}
+	background-size: cover;
 }
 
 @media(max-width: 1112px) {
@@ -126,29 +121,52 @@ body {
 		height: 312px;
 	}
 
-	.game__field {
-		width: 100%;
-	}
-
 	.wrapper {
 		width: 96%;
 	}
 }
 
-@media(max-width: 798px) {
+@media(max-width: 996px){
+	.start-page__cards {
+	display: none;	
+	}
+}
+
+@media(max-width: 768px) {
 	.card, .flip-card-game_over {
 		width: 160px;
 		height: 246px;
 	}
 
 	.game__field {
-		width: 100%;
+		max-width: 691px;
 	}
 }
 
-@media(max-width: 592px) {
-		.card, .flip-card-game_over {
-		width: 140px;
-		height: 215px;
+/*это для 10 карт*/
+
+@media(max-width: 415px) {
+	.card, .flip-card-game_over {
+		width: 85px;
+		height: 131px;
+		margin-right: 12px;
 	}
 }
+
+@media(max-width: 376px) {
+	.card, .flip-card-game_over {
+		margin-right: 0;
+		width: 72px;
+		height: 111px;
+		margin-bottom: 12px
+	}
+}
+
+
+@media(max-width: 321px) {
+	.card, .flip-card-game_over {
+		width: 60px;
+   		height: 92px;
+	}
+}
+

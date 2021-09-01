@@ -38,7 +38,6 @@ for (let i = 0; i < level.length; i++) {
 			for (let i = 0; i < counterCards; i++) {
 				createCard();
 			if (counterCards == 6 || counterCards ==3) {
-				game__field.style.width = 78 + '%';
 				game__field.style.maxWidth = 960 + 'px';
 			} else if (counterCards == 10) {
 				game__field.style.maxWidth = 1385 + 'px';
