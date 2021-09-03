@@ -141,6 +141,31 @@ body {
 	.game__field {
 		max-width: 691px;
 	}
+
+	.start-page {
+    	padding-top: 60px;
+	}
+	.start-page__title {
+   		 font: bold 50px/57px 'RobotoBold', sans-serif;
+   	}
+
+   	.level-item {
+    	font: bold 45px/50px 'RobotoBold', sans-serif;
+   		margin-bottom: 25px;
+	}
+	.start-page__button {
+    	margin-top: 0px;
+	}
+}
+
+
+
+@media(max-width: 580px) {
+	.card, .flip-card-game_over {
+		width: 116px;
+		height: 178px;
+	}
+
 }
 
 /*это для 10 карт*/
@@ -150,6 +175,20 @@ body {
 		width: 85px;
 		height: 131px;
 		margin-right: 12px;
+	}
+
+	.start-page__title {
+    	font: bold 40px/53px 'RobotoBold', sans-serif;
+    }
+
+    .level-item {
+    	font: bold 35px/40px 'RobotoBold', sans-serif;
+    	margin-bottom: 20px;
+	}
+
+	.start-page__button {
+    	padding: 30px 66px;
+    	font: bold 25px/30px 'RobotoRegular', sans-serif;
 	}
 }
 
