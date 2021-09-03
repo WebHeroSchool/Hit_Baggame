@@ -60,7 +60,6 @@ for (let i = 0; i < level.length; i++) {
 					})
 				};
 
-
 			}
 		}
 
