@@ -104,6 +104,16 @@ body {
 	border-radius: 7px;
 }
 
+.cards10 {
+	background: url(img/card.png);
+	background-size: cover;
+	width: 218px;
+	height: 341px;
+	margin-right: 24px;
+	margin-bottom: 24px;
+	border-radius: 7px;
+}
+
 .card:hover {
 	transform: translateY(-10px) rotate(-5deg);
 	transition: 1s;
@@ -115,40 +125,63 @@ body {
 	background-size: cover;
 }
 
-@media(max-width: 1112px) {
-	.card, .flip-card-game_over {
+.rotate {
+	transition: 1s;
+    transform: rotateY(180deg);
+}
+
+@media(max-width: 1408px) {
+	.cards10 {
 		width: 200px;
 		height: 312px;
 	}
+}
 
+@media(max-width: 1112px) {
 	.wrapper {
 		width: 96%;
+	}
+	.cards10 {
+		width: 150px;
+		height: 231px;
 	}
 }
 
 @media(max-width: 996px){
 	.start-page__cards {
-	display: none;	
+		display: none;	
+	}
+	.start-page {
+    	text-align: center;	
+	}
+	.active::before {
+		left: 0px;
+  		top: 15px;
+	}
+	.start-page__footer {
+    	justify-content: center;
 	}
 }
 
 @media(max-width: 768px) {
 	.card, .flip-card-game_over {
-		width: 160px;
-		height: 246px;
+		width: 161px;
+		height: 248px;
 	}
-
+	.cards10 {
+		width: 120px;
+		height: 184px;
+		margin-right: 12px;
+	}
 	.game__field {
 		max-width: 691px;
 	}
-
 	.start-page {
     	padding-top: 60px;
 	}
 	.start-page__title {
    		 font: bold 50px/57px 'RobotoBold', sans-serif;
    	}
-
    	.level-item {
     	font: bold 45px/50px 'RobotoBold', sans-serif;
    		margin-bottom: 25px;
@@ -158,54 +191,69 @@ body {
 	}
 }
 
-
-
 @media(max-width: 580px) {
 	.card, .flip-card-game_over {
 		width: 116px;
 		height: 178px;
 	}
-
+	.cards10 {
+		width: 100px;
+		height: 154px;
+	}
 }
 
-/*это для 10 карт*/
-
-@media(max-width: 415px) {
+@media(max-width: 480px) {
 	.card, .flip-card-game_over {
 		width: 85px;
 		height: 131px;
 		margin-right: 12px;
 	}
-
+	.cards10 {
+    	width: 80px;
+    	height: 123px;
+    	margin-right: 10px;
+	}
 	.start-page__title {
     	font: bold 40px/53px 'RobotoBold', sans-serif;
     }
-
     .level-item {
     	font: bold 35px/40px 'RobotoBold', sans-serif;
     	margin-bottom: 20px;
 	}
-
 	.start-page__button {
     	padding: 30px 66px;
     	font: bold 25px/30px 'RobotoRegular', sans-serif;
 	}
 }
 
+@media(max-width: 440px) {
+	.card, .flip-card-game_over {
+		width: 90px;
+		height: 139px;	
+	}
+}
+
 @media(max-width: 376px) {
 	.card, .flip-card-game_over {
-		margin-right: 0;
-		width: 72px;
-		height: 111px;
+		margin-right: 10px;
+		width: 81px;
+		height: 125px;
 		margin-bottom: 12px
+	}
+	.cards10 {
+    	width: 65px;
+    	height: 100px;
 	}
 }
 
 
 @media(max-width: 321px) {
 	.card, .flip-card-game_over {
-		width: 60px;
-   		height: 92px;
+		width: 70px;
+   		height: 107px;
+	}
+	.cards10 {
+    	width: 51px;
+    	height: 80px;
 	}
 }
-
