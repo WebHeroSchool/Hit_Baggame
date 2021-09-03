@@ -104,6 +104,7 @@ body {
 	margin-right: 24px;
 	margin-bottom: 24px;
 	border-radius: 7px;
+	cursor: pointer;
 }
 
 .cards10 {
@@ -117,6 +118,7 @@ body {
 	margin-right: 24px;
 	margin-bottom: 24px;
 	border-radius: 7px;
+	cursor: pointer;
 }
 
 .card:hover {
@@ -128,7 +130,6 @@ body {
 .flip-card-game_over {
 	background: url(img/card_gameover.png);
 	background-size: cover;
-	transform: rotateY(-180deg);
 }
 
 .flip-card-game_over10 {
