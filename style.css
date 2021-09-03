@@ -35,6 +35,7 @@ body {
 	margin-bottom: 34px;
 	padding-left: 50px;
 	position: 	relative;
+	cursor: pointer;
 }
 
 .active::before {
@@ -88,6 +89,7 @@ body {
 	flex-wrap: wrap;
 	height: 100vh;
 	margin: 0 auto;
+	transform-style: preserve-3d;
 }
 
 /* класс создан в JS для рубашки карты*/
@@ -102,6 +104,21 @@ body {
 	margin-right: 24px;
 	margin-bottom: 24px;
 	border-radius: 7px;
+	cursor: pointer;
+}
+
+.cards10 {
+	background: url(img/card.png);
+	background-size: cover;
+}
+
+.cards10, .flip-card-game_over10 {
+	width: 218px;
+	height: 341px;
+	margin-right: 24px;
+	margin-bottom: 24px;
+	border-radius: 7px;
+	cursor: pointer;
 }
 
 .card:hover {
@@ -111,44 +128,77 @@ body {
 }
 
 .flip-card-game_over {
-	background: url(img/card-game_over.png);
+	background: url(img/card_gameover.png);
 	background-size: cover;
 }
 
-@media(max-width: 1112px) {
-	.card, .flip-card-game_over {
+.flip-card-game_over10 {
+	background: url(img/card_gameover.png);
+	background-size: cover;
+}
+
+.rotate {
+	transition: 1s;
+    transform: rotateY(180deg);
+}
+
+@media(max-width: 1408px) {
+	.cards10, .flip-card-game_over10 {
 		width: 200px;
 		height: 312px;
 	}
+}
 
+@media(max-width: 1112px) {
 	.wrapper {
 		width: 96%;
+	}
+	.cards10, .flip-card-game_over10 {
+		width: 150px;
+		height: 231px;
 	}
 }
 
 @media(max-width: 996px){
 	.start-page__cards {
-	display: none;	
+		display: none;	
+	}
+	.start-page {
+    	text-align: center;	
+	}
+	.active::before {
+		left: 0px;
+  		top: 15px;
+	}
+	.start-page__footer {
+    	justify-content: center;
+	}
+	.level-item {
+	    margin: 0 auto 34px;
+    	width: 35%;
+    	padding-left: 30px;
 	}
 }
 
 @media(max-width: 768px) {
 	.card, .flip-card-game_over {
-		width: 160px;
-		height: 246px;
+		width: 161px;
+		height: 248px;
 	}
-
+	.cards10, .flip-card-game_over10 {
+		width: 120px;
+		height: 184px;
+		margin-right: 12px;
+	}
 	.game__field {
 		max-width: 691px;
 	}
-
 	.start-page {
     	padding-top: 60px;
 	}
 	.start-page__title {
    		 font: bold 50px/57px 'RobotoBold', sans-serif;
    	}
-
    	.level-item {
     	font: bold 45px/50px 'RobotoBold', sans-serif;
    		margin-bottom: 25px;
@@ -156,56 +206,79 @@ body {
 	.start-page__button {
     	margin-top: 0px;
 	}
+	.level-item {
+    	width: 45%;
+	}
 }
-
-
 
 @media(max-width: 580px) {
 	.card, .flip-card-game_over {
 		width: 116px;
 		height: 178px;
 	}
-
+	.cards10, .flip-card-game_over10 {
+		width: 100px;
+		height: 154px;
+	}
 }
 
-/*это для 10 карт*/
-
-@media(max-width: 415px) {
+@media(max-width: 480px) {
 	.card, .flip-card-game_over {
 		width: 85px;
 		height: 131px;
 		margin-right: 12px;
 	}
-
+	.cards10, .flip-card-game_over10 {
+    	width: 80px;
+    	height: 123px;
+    	margin-right: 10px;
+	}
 	.start-page__title {
     	font: bold 40px/53px 'RobotoBold', sans-serif;
     }
-
     .level-item {
     	font: bold 35px/40px 'RobotoBold', sans-serif;
     	margin-bottom: 20px;
 	}
-
 	.start-page__button {
     	padding: 30px 66px;
     	font: bold 25px/30px 'RobotoRegular', sans-serif;
 	}
 }
 
+@media(max-width: 440px) {
+	.card, .flip-card-game_over {
+		width: 90px;
+		height: 139px;	
+	}
+}
+
 @media(max-width: 376px) {
 	.card, .flip-card-game_over {
-		margin-right: 0;
-		width: 72px;
-		height: 111px;
+		margin-right: 10px;
+		width: 81px;
+		height: 125px;
 		margin-bottom: 12px
+	}
+	.cards10, .flip-card-game_over10 {
+    	width: 65px;
+    	height: 100px;
 	}
 }
 
 
 @media(max-width: 321px) {
 	.card, .flip-card-game_over {
-		width: 60px;
-   		height: 92px;
+		width: 70px;
+   		height: 107px;
+	}
+	.cards10, .flip-card-game_over10 {
+    	width: 51px;
+    	height: 80px;
+	}
+
+	.level-item {
+    	width: 65%;
+    	padding-left: 20px;
 	}
 }
-
