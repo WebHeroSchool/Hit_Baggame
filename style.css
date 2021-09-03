@@ -35,6 +35,7 @@ body {
 	margin-bottom: 34px;
 	padding-left: 50px;
 	position: 	relative;
+	cursor: pointer;
 }
 
 .active::before {
@@ -88,6 +89,7 @@ body {
 	flex-wrap: wrap;
 	height: 100vh;
 	margin: 0 auto;
+	transform-style: preserve-3d;
 }
 
 /* класс создан в JS для рубашки карты*/
@@ -107,6 +109,9 @@ body {
 .cards10 {
 	background: url(img/card.png);
 	background-size: cover;
+}
+
+.cards10, .flip-card-game_over10 {
 	width: 218px;
 	height: 341px;
 	margin-right: 24px;
@@ -121,7 +126,13 @@ body {
 }
 
 .flip-card-game_over {
-	background: url(img/card-game_over.png);
+	background: url(img/card_gameover.png);
+	background-size: cover;
+	transform: rotateY(-180deg);
+}
+
+.flip-card-game_over10 {
+	background: url(img/card_gameover.png);
 	background-size: cover;
 }
 
@@ -131,7 +142,7 @@ body {
 }
 
 @media(max-width: 1408px) {
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
 		width: 200px;
 		height: 312px;
 	}
@@ -141,7 +152,7 @@ body {
 	.wrapper {
 		width: 96%;
 	}
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
 		width: 150px;
 		height: 231px;
 	}
@@ -161,6 +172,11 @@ body {
 	.start-page__footer {
     	justify-content: center;
 	}
+	.level-item {
+	    margin: 0 auto 34px;
+    	width: 35%;
+    	padding-left: 30px;
+	}
 }
 
 @media(max-width: 768px) {
@@ -168,7 +184,7 @@ body {
 		width: 161px;
 		height: 248px;
 	}
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
 		width: 120px;
 		height: 184px;
 		margin-right: 12px;
@@ -189,6 +205,9 @@ body {
 	.start-page__button {
     	margin-top: 0px;
 	}
+	.level-item {
+    	width: 45%;
+	}
 }
 
 @media(max-width: 580px) {
@@ -196,7 +215,7 @@ body {
 		width: 116px;
 		height: 178px;
 	}
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
 		width: 100px;
 		height: 154px;
 	}
@@ -208,7 +227,7 @@ body {
 		height: 131px;
 		margin-right: 12px;
 	}
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
     	width: 80px;
     	height: 123px;
     	margin-right: 10px;
@@ -240,7 +259,7 @@ body {
 		height: 125px;
 		margin-bottom: 12px
 	}
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
     	width: 65px;
     	height: 100px;
 	}
@@ -252,8 +271,13 @@ body {
 		width: 70px;
    		height: 107px;
 	}
-	.cards10 {
+	.cards10, .flip-card-game_over10 {
     	width: 51px;
     	height: 80px;
+	}
+
+	.level-item {
+    	width: 65%;
+    	padding-left: 20px;
 	}
 }
